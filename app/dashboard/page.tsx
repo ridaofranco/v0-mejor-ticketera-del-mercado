@@ -17,7 +17,7 @@ export default function DashboardPage() {
         <main className="flex w-full flex-col overflow-hidden py-6">
           <div className="flex items-center justify-between mb-6">
             <h1 className="text-3xl font-bold">Dashboard</h1>
-            <Button className="bg-rose-500 hover:bg-rose-600" asChild>
+            <Button className="bg-primary hover:bg-der-orange-dark" asChild>
               <Link href="/dashboard/eventos/crear">
                 <Plus className="mr-2 h-4 w-4" />
                 Crear evento
@@ -32,7 +32,7 @@ export default function DashboardPage() {
                 <DollarSign className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">$45,231.89</div>
+                <div className="text-2xl font-bold">$4.523.189</div>
                 <p className="text-xs text-muted-foreground">+20.1% respecto al mes pasado</p>
               </CardContent>
             </Card>
@@ -79,7 +79,7 @@ export default function DashboardPage() {
                 {[
                   {
                     title: "Festival de Música Electrónica",
-                    date: "15 Dic 2023",
+                    date: "15 Abr 2026",
                     location: "Club Nocturno Central",
                     sold: 450,
                     total: 500,
@@ -87,7 +87,7 @@ export default function DashboardPage() {
                   },
                   {
                     title: "Concierto de Rock Alternativo",
-                    date: "22 Dic 2023",
+                    date: "22 Abr 2026",
                     location: "Estadio Municipal",
                     sold: 1200,
                     total: 2000,
@@ -95,7 +95,7 @@ export default function DashboardPage() {
                   },
                   {
                     title: "Obra de Teatro: Romeo y Julieta",
-                    date: "10 Ene 2024",
+                    date: "10 May 2026",
                     location: "Teatro Nacional",
                     sold: 320,
                     total: 400,
@@ -103,7 +103,7 @@ export default function DashboardPage() {
                   },
                   {
                     title: "Conferencia de Tecnología",
-                    date: "05 Feb 2024",
+                    date: "05 Jun 2026",
                     location: "Centro de Convenciones",
                     sold: 180,
                     total: 300,
@@ -111,7 +111,7 @@ export default function DashboardPage() {
                   },
                   {
                     title: "Partido de Fútbol: Final de Copa",
-                    date: "20 Dic 2023",
+                    date: "20 Abr 2026",
                     location: "Estadio Principal",
                     sold: 25000,
                     total: 30000,
@@ -119,7 +119,7 @@ export default function DashboardPage() {
                   },
                   {
                     title: "Festival Gastronómico",
-                    date: "12 Ene 2024",
+                    date: "12 May 2026",
                     location: "Parque Central",
                     sold: 750,
                     total: 1000,
@@ -187,45 +187,45 @@ export default function DashboardPage() {
                               id: "INV-001",
                               customer: "Carlos Rodríguez",
                               event: "Festival de Música Electrónica",
-                              date: "12/12/2023",
+                              date: "12/04/2026",
                               quantity: 2,
-                              amount: "$120.00",
+                              amount: "$12.000",
                               status: "Completado",
                             },
                             {
                               id: "INV-002",
                               customer: "María López",
                               event: "Concierto de Rock Alternativo",
-                              date: "11/12/2023",
+                              date: "11/04/2026",
                               quantity: 4,
-                              amount: "$200.00",
+                              amount: "$20.000",
                               status: "Completado",
                             },
                             {
                               id: "INV-003",
                               customer: "Juan Pérez",
                               event: "Obra de Teatro: Romeo y Julieta",
-                              date: "10/12/2023",
+                              date: "10/04/2026",
                               quantity: 2,
-                              amount: "$80.00",
+                              amount: "$8.000",
                               status: "Completado",
                             },
                             {
                               id: "INV-004",
                               customer: "Ana Martínez",
                               event: "Partido de Fútbol: Final de Copa",
-                              date: "09/12/2023",
+                              date: "09/04/2026",
                               quantity: 3,
-                              amount: "$150.00",
+                              amount: "$15.000",
                               status: "Completado",
                             },
                             {
                               id: "INV-005",
                               customer: "Roberto Sánchez",
                               event: "Festival Gastronómico",
-                              date: "08/12/2023",
+                              date: "08/04/2026",
                               quantity: 2,
-                              amount: "$60.00",
+                              amount: "$6.000",
                               status: "Reembolsado",
                             },
                           ].map((invoice, i) => (
@@ -311,3 +311,4 @@ export default function DashboardPage() {
     </div>
   )
 }
+
