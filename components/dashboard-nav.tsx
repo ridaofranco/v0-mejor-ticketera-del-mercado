@@ -1,6 +1,6 @@
 import type React from "react"
 import Link from "next/link"
-import { BarChart3, Calendar, CreditCard, Home, Settings, Tag, Ticket, Users, QrCode } from "lucide-react"
+import { BarChart3, Calendar, CreditCard, Home, Settings, Tag, Ticket, Users, QrCode, Plug } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -40,7 +40,7 @@ export function DashboardNav({ className, ...props }: DashboardNavProps) {
       icon: <Users className="mr-2 h-4 w-4" />,
     },
     {
-      title: "Estadísticas",
+      title: "EstadÃ­sticas",
       href: "/dashboard/estadisticas",
       icon: <BarChart3 className="mr-2 h-4 w-4" />,
     },
@@ -50,7 +50,12 @@ export function DashboardNav({ className, ...props }: DashboardNavProps) {
       icon: <QrCode className="mr-2 h-4 w-4" />,
     },
     {
-      title: "Configuración",
+      title: "Integraciones / API",
+      href: "/organizadores/integraciones",
+      icon: <Plug className="mr-2 h-4 w-4" />,
+    },
+    {
+      title: "ConfiguraciÃ³n",
       href: "/dashboard/configuracion",
       icon: <Settings className="mr-2 h-4 w-4" />,
     },
@@ -59,7 +64,7 @@ export function DashboardNav({ className, ...props }: DashboardNavProps) {
   return (
     <div className={cn("flex flex-col space-y-1", className)} {...props}>
       {navItems.map((item) => (
-        <Button key={item.href} variant="ghost" className="justify-start" asChild>
+        <Button key={item.href} variant="ghost" className="justify-start hover:bg-primary/10 hover:text-primary" asChild>
           <Link href={item.href}>
             {item.icon}
             {item.title}
