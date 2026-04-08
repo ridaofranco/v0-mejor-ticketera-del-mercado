@@ -15,14 +15,14 @@ export default function ControlAccesoPage() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <div>
               <h1 className="text-3xl font-bold">Control de Acceso</h1>
-              <p className="text-gray-500">Gestiona la entrada de asistentes a tus eventos</p>
+              <p className="text-muted-foreground">Gestiona la entrada de asistentes a tus eventos</p>
             </div>
             <div className="flex gap-2">
               <Button variant="outline">
                 <Upload className="mr-2 h-4 w-4" />
                 Exportar lista
               </Button>
-              <Button className="bg-rose-500 hover:bg-rose-600">
+              <Button className="bg-primary hover:bg-der-orange-dark">
                 <QrCode className="mr-2 h-4 w-4" />
                 Escanear QR
               </Button>
@@ -56,7 +56,7 @@ export default function ControlAccesoPage() {
                     active: false,
                   },
                 ].map((event, i) => (
-                  <Card key={i} className={`cursor-pointer ${event.active ? "border-rose-500 bg-rose-50" : ""}`}>
+                  <Card key={i} className={`cursor-pointer ${event.active ? "border-primary bg-primary/5" : ""}`}>
                     <CardHeader className="pb-2">
                       <CardTitle className="text-lg">{event.title}</CardTitle>
                       <CardDescription>
@@ -65,9 +65,9 @@ export default function ControlAccesoPage() {
                     </CardHeader>
                     <CardFooter className="pt-2">
                       {event.active ? (
-                        <div className="text-rose-500 font-medium text-sm">Evento activo</div>
+                        <div className="text-primary font-medium text-sm">Evento activo</div>
                       ) : (
-                        <Button variant="ghost" size="sm" className="text-rose-500">
+                        <Button variant="ghost" size="sm" className="text-primary">
                           Seleccionar
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
@@ -96,13 +96,13 @@ export default function ControlAccesoPage() {
                   <div className="w-full max-w-md aspect-square bg-gray-100 rounded-lg flex items-center justify-center mb-6">
                     <QrCode className="h-24 w-24 text-gray-400" />
                     <div className="absolute">
-                      <Button className="bg-rose-500 hover:bg-rose-600">Activar cámara</Button>
+                      <Button className="bg-primary hover:bg-der-orange-dark">Activar cámara</Button>
                     </div>
                   </div>
                   <div className="w-full max-w-md">
                     <div className="flex w-full items-center space-x-2">
                       <Input placeholder="Ingresa el código del ticket manualmente" />
-                      <Button type="submit" className="bg-rose-500 hover:bg-rose-600">
+                      <Button type="submit" className="bg-primary hover:bg-der-orange-dark">
                         Validar
                       </Button>
                     </div>
@@ -177,7 +177,7 @@ export default function ControlAccesoPage() {
                           </div>
                           <div>
                             <p className="font-medium">{entry.name}</p>
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm text-muted-foreground">
                               {entry.ticketId} • {entry.ticketType}
                             </p>
                           </div>
@@ -212,10 +212,10 @@ export default function ControlAccesoPage() {
                 <CardContent>
                   <div className="flex w-full items-center space-x-2 mb-6">
                     <div className="relative flex-1">
-                      <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500" />
+                      <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                       <Input type="search" placeholder="Buscar por nombre o ID de ticket..." className="pl-8" />
                     </div>
-                    <Button type="submit" className="bg-rose-500 hover:bg-rose-600">
+                    <Button type="submit" className="bg-primary hover:bg-der-orange-dark">
                       Buscar
                     </Button>
                   </div>
@@ -308,7 +308,7 @@ export default function ControlAccesoPage() {
                               </span>
                             </td>
                             <td className="p-2 text-sm">
-                              <Button variant="ghost" size="sm" className="text-rose-500">
+                              <Button variant="ghost" size="sm" className="text-primary">
                                 Validar
                               </Button>
                             </td>
@@ -329,7 +329,7 @@ export default function ControlAccesoPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="text-3xl font-bold">450 / 500</div>
-                    <p className="text-sm text-gray-500">90% de asistencia</p>
+                    <p className="text-sm text-muted-foreground">90% de asistencia</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -338,7 +338,7 @@ export default function ControlAccesoPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="text-3xl font-bold">450</div>
-                    <p className="text-sm text-gray-500">Último hace 5 minutos</p>
+                    <p className="text-sm text-muted-foreground">Último hace 5 minutos</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -347,7 +347,7 @@ export default function ControlAccesoPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="text-3xl font-bold">50</div>
-                    <p className="text-sm text-gray-500">10% restante</p>
+                    <p className="text-sm text-muted-foreground">10% restante</p>
                   </CardContent>
                 </Card>
               </div>
@@ -396,7 +396,7 @@ export default function ControlAccesoPage() {
                           </div>
                           <div>
                             <p className="font-medium">Tickets duplicados</p>
-                            <p className="text-sm text-gray-500">3 incidencias</p>
+                            <p className="text-sm text-muted-foreground">3 incidencias</p>
                           </div>
                         </div>
                         <Button variant="outline" size="sm">
@@ -410,7 +410,7 @@ export default function ControlAccesoPage() {
                           </div>
                           <div>
                             <p className="font-medium">Tickets inválidos</p>
-                            <p className="text-sm text-gray-500">2 incidencias</p>
+                            <p className="text-sm text-muted-foreground">2 incidencias</p>
                           </div>
                         </div>
                         <Button variant="outline" size="sm">
@@ -428,3 +428,4 @@ export default function ControlAccesoPage() {
     </div>
   )
 }
+
