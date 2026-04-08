@@ -16,8 +16,12 @@ export default function CheckoutPage() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">
-              <Ticket className="h-6 w-6 text-rose-500" />
-              <span className="text-xl font-bold">TicketPro</span>
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-heading font-black text-sm text-primary-foreground">
+                E
+              </div>
+              <span className="text-xl font-bold">
+                ENT<span className="text-primary">Á</span>
+              </span>
             </Link>
           </div>
         </div>
@@ -27,7 +31,7 @@ export default function CheckoutPage() {
           <div className="mb-8">
             <Link
               href="/evento/1"
-              className="inline-flex items-center text-sm font-medium text-rose-500 hover:underline"
+              className="inline-flex items-center text-sm font-medium text-primary hover:underline"
             >
               <ArrowLeft className="mr-1 h-4 w-4" />
               Volver al evento
@@ -38,7 +42,7 @@ export default function CheckoutPage() {
             <div className="md:col-span-2 space-y-6">
               <div>
                 <h1 className="text-2xl font-bold mb-1">Finalizar compra</h1>
-                <p className="text-gray-500">Completa tus datos para recibir tus tickets</p>
+                <p className="text-muted-foreground">Completa tus datos para recibir tus tickets</p>
               </div>
 
               <Card>
@@ -60,7 +64,7 @@ export default function CheckoutPage() {
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
                     <Input id="email" type="email" placeholder="tu@email.com" />
-                    <p className="text-xs text-gray-500">Recibirás tus tickets en este email</p>
+                    <p className="text-xs text-muted-foreground">Recibirás tus tickets en este email</p>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone">Teléfono</Label>
@@ -80,10 +84,10 @@ export default function CheckoutPage() {
                       <RadioGroupItem value="card" id="card" />
                       <Label htmlFor="card" className="flex-1 cursor-pointer">
                         <div className="flex items-center gap-3">
-                          <CreditCard className="h-5 w-5 text-gray-500" />
+                          <CreditCard className="h-5 w-5 text-muted-foreground" />
                           <div>
                             <div className="font-medium">Tarjeta de crédito/débito</div>
-                            <div className="text-xs text-gray-500">Pago seguro con tarjeta</div>
+                            <div className="text-xs text-muted-foreground">Pago seguro con tarjeta</div>
                           </div>
                         </div>
                       </Label>
@@ -149,8 +153,8 @@ export default function CheckoutPage() {
                   <div className="space-y-3">
                     <div>
                       <h3 className="font-bold">Gran Concierto de Rock</h3>
-                      <div className="text-sm text-gray-500">15 Diciembre 2023 • 20:00</div>
-                      <div className="text-sm text-gray-500">Estadio Nacional</div>
+                      <div className="text-sm text-muted-foreground">15 Diciembre 2023 • 20:00</div>
+                      <div className="text-sm text-muted-foreground">Estadio Nacional</div>
                     </div>
 
                     <Separator />
@@ -159,7 +163,7 @@ export default function CheckoutPage() {
                       <div className="flex justify-between">
                         <div>
                           <div>General</div>
-                          <div className="text-sm text-gray-500">1 x $25.00</div>
+                          <div className="text-sm text-muted-foreground">1 x $25.00</div>
                         </div>
                         <div className="font-medium">$25.00</div>
                       </div>
@@ -184,12 +188,12 @@ export default function CheckoutPage() {
                   </div>
                 </CardContent>
                 <CardFooter className="flex-col space-y-4">
-                  <Button className="w-full bg-rose-500 hover:bg-rose-600" asChild>
+                  <Button className="w-full bg-primary hover:bg-der-orange-dark" asChild>
                     <Link href="/perfil">Confirmar y pagar $27.50</Link>
                   </Button>
-                  <div className="text-xs text-center text-gray-500">
+                  <div className="text-xs text-center text-muted-foreground">
                     Al completar esta compra, aceptas nuestros{" "}
-                    <Link href="#" className="text-rose-500 hover:underline">
+                    <Link href="#" className="text-primary hover:underline">
                       términos y condiciones
                     </Link>
                     .
@@ -200,11 +204,15 @@ export default function CheckoutPage() {
           </div>
         </div>
       </main>
-      <footer className="border-t bg-white">
+      <footer className="border-t bg-card">
         <div className="container flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-12">
           <div className="flex items-center gap-2">
-            <Ticket className="h-6 w-6 text-rose-500" />
-            <span className="text-xl font-bold">TicketPro</span>
+            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-heading font-black text-sm text-primary-foreground">
+              E
+            </div>
+            <span className="text-xl font-bold">
+              ENT<span className="text-primary">Á</span>
+            </span>
           </div>
           <nav className="flex flex-wrap gap-4 md:gap-6">
             <Link href="#" className="text-sm hover:underline">
@@ -220,9 +228,10 @@ export default function CheckoutPage() {
               Contacto
             </Link>
           </nav>
-          <div className="text-sm text-gray-500">© 2023 TicketPro. Todos los derechos reservados.</div>
+          <div className="text-sm text-muted-foreground">© 2026 ENTRÁ by Somos DER</div>
         </div>
       </footer>
     </div>
   )
 }
+
